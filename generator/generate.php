@@ -77,6 +77,12 @@ foreach($components as $component) {
             }
             $content = str_replace('~~CVSS~~', $cvss, $content);
 
+			$hackerOne = '';
+	        if (isset($advisory['HackerOne'])) {
+				$hackerOne = '<p>HackerOne report: <a href="https://hackerone.com/reports/'.$advisory['HackerOne']['id'].'">'.$advisory['HackerOne']['id'].'</a></p>';
+	        }
+	        $content = str_replace('~~HACKERONE~~', $hackerOne, $content);
+
             $content = str_replace('~~DESCRIPTION~~', str_replace("</p>", "</p>\n", $advisory['Description']), $content);
 
             $affectedVersions = '';
@@ -112,14 +118,22 @@ foreach($components as $component) {
                     $company = isset($acknowledgment['Company']) ? $acknowledgment['Company'] : '';
                     $mail = isset($acknowledgment['Mail']) ? $acknowledgment['Mail'] : '';
                     $reason = isset($acknowledgment['Reason']) ? $acknowledgment['Reason']: '';
-                    $acknowledgments .= '<li>'.$acknowledgment['Name'];
+                    $a = $acknowledgment['Name'];
                     if($company !== '') {
-                        $acknowledgments .= ' - '.$company;
+                        $a .= ' - '.$company;
                     }
                     if($mail !== '') {
-                        $acknowledgments .= ' ('.$mail.')';
+                        $a .= ' ('.$mail.')';
                     }
-                    $acknowledgments .= ' - '.$reason.'</li>';
+                    $a .= ' - '.$reason;
+	                if (isset($acknowledgment['Link'])) {
+		                $link = $acknowledgment['Link'];
+		                if (strpos($link, 'http') !== 0) {
+							$link = "https://$link";
+		                }
+		                $a = "<a href=\"$link\" target=\"_blank\" rel=\"noreferrer\">$a</a>";
+	                }
+	                $acknowledgments .= "<li>$a</li>";
                 }
             }
             $content = str_replace('~~ACKNOWLEDGMENTS~~', $acknowledgments, $content);
