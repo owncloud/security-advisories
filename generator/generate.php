@@ -79,7 +79,7 @@ foreach($components as $component) {
 
 			$hackerOne = '';
 	        if (isset($advisory['HackerOne'])) {
-				$hackerOne = '<p>HackerOne report: <a href="https://hackerone.com/reports/'.$advisory['HackerOne']['id'].'">'.$advisory['HackerOne']['id'].'</a></p>';
+				$hackerOne = PHP_EOL . '<p>HackerOne report: <a href="https://hackerone.com/reports/'.$advisory['HackerOne']['id'].'">'.$advisory['HackerOne']['id'].'</a></p>';
 	        }
 	        $content = str_replace('~~HACKERONE~~', $hackerOne, $content);
 
