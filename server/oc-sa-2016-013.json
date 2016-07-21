@@ -1,0 +1,36 @@
+{
+    "Title": "Content-Spoofing in files app",
+    "Timestamp": 1468929600,
+    "Risk": 1,
+    "CVSS3": {
+        "score": 0,
+        "vector": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+    },
+    "CWE": {
+        "id": 451,
+        "name": "User Interface (UI) Misrepresentation of Critical Information"
+    },
+    "HackerOne": {
+        "id": "146046"
+    },
+    "Affected": [
+        {
+            "Version": "9.0.4",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/c92c234059f8b1dc7d53122985ec0d398895a2cf"
+            ]
+        }
+    ],
+    "Description": "",
+    "ActionTaken": "The passed parameter is now verified.",
+    "Acknowledgment":[
+        {
+            "Name":"Md. Ishrat Shahriyar",
+            "Link": "https://twitter.com/meshahriyar",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ]
+}

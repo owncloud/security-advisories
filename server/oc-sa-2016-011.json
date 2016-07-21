@@ -1,0 +1,38 @@
+{
+    "Title": "Stored XSS in gallery application",
+    "Timestamp": 1468929600,
+    "Type": "Insecure Direct Object References",
+    "Risk": 2,
+    "CVSS3": {
+        "score": 6.4,
+        "vector": "AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:N"
+    },
+    "CWE": {
+        "id": 79,
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+    },
+    "HackerOne": {
+        "id": "145355"
+    },
+    "Affected": [
+        {
+            "Version": "9.0.4",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "gallery/6933d27afe518967bd1b60e6a7eacd88288929fc"
+            ]
+        }
+    ],
+    "Description": "",
+    "ActionTaken": "The user input is now properly sanitised before provided back to the user.",
+    "Acknowledgment":[
+        {
+            "Name":"Frans Rosen",
+            "Company":"Detectify",
+            "Link":"www.detectify.com",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "Title": "Log pollution can potentially lead to local HTML injection",
+    "Timestamp": 1468929600,
+    "Risk": 1,
+    "CVSS3": {
+        "score": 4.3,
+        "vector": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+    },
+    "CWE": {
+        "id": 209,
+        "name": "Information Exposure Through an Error Message"
+    },
+    "HackerOne": {
+        "id": "146278"
+    },
+    "Affected": [
+        {
+            "Version": "8.1.9",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/044ee072a647636b1a17c89265c7233b35371335"
+            ]
+        },
+        {
+            "Version": "8.2.7",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/b7fa2c5dc945b40bc6ed0a9a0e47c282ebf043e1"
+            ]
+        },
+        {
+            "Version": "9.0.4",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/efa35d621dc7ff975468e636a5d1c153511296dc"
+            ]
+        }
+    ],
+    "Description": "",
+    "ActionTaken": "The file is now delivered with a content-type of \"application/octet-stream\".",
+    "Acknowledgment":[
+        {
+            "Name":"Alejo Popovici",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ]
+}
