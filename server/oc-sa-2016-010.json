@@ -1,0 +1,41 @@
+{
+    "Title": "Insecure Direct Object References in Gallery",
+    "Timestamp": 1468368000,
+    "Type": "Insecure Direct Object References",
+    "Risk": 2,
+    "CVSS2": {
+        "score": 5.0,
+        "vector": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+    },
+    "CWE": {
+        "id": 932,
+        "name": "Insecure Direct Object References"
+    },
+    "Affected": [
+        {
+            "Version": "8.2.6",
+            "CVE": "CVE-2016-5876",
+            "Operator": "<",
+            "Commits": [
+                "gallery/2e8f1f2509d15876ab09396dfe6c463aacdf5c5b"
+            ]
+        },
+        {
+            "Version": "9.0.3",
+            "CVE": "CVE-2016-5876",
+            "Operator": "<",
+            "Commits": [
+                "gallery/e3021ab6cc4e37eccb27eab6374722632c85eed7"
+            ]
+        }
+    ],
+    "Description": "<p>ownCloud was vulnerable to a insecure direct object reference. Any unauthenticated user would be able to download any image from the server if the gallery app is enabled.</p>",
+    "ActionTaken": "<p>The share token is verified.</p>",
+    "Acknowledgment":[
+        {
+            "Name":"Lukas Reschke",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ]
+}

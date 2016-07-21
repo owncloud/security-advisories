@@ -1,0 +1,93 @@
+{
+    "Title": "Open Redirector involving user interaction",
+    "Timestamp": 1468368000,
+    "Type": "Insecure Direct Object References",
+    "Risk": 1,
+    "CVSS3": {
+        "score": 4.3,
+        "vector": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+    },
+    "CWE": {
+        "id": 601,
+        "name": "URL Redirection to Untrusted Site ('Open Redirect')"
+    },
+    "Affected": [
+        {
+            "Version": "7.0.14",
+            "CVE": "CVE-2016-xxxx",
+            "Operator": "<",
+            "Commits": [
+                "core/9d5005c795c99ba1ef516035542e15157931292a"
+            ]
+        },
+        {
+            "Version": "8.0.12",
+            "CVE": "CVE-2016-xxxx",
+            "Operator": "<",
+            "Commits": [
+                "core/9cdb8817258e62917c78765efc127247eb181b87"
+            ]
+        },
+        {
+            "Version": "8.1.7",
+            "CVE": "CVE-2016-xxxx",
+            "Operator": "<",
+            "Commits": [
+                "core/80db6c60a3916175feee775970988c8cc8c0f49f"
+            ]
+        },
+        {
+            "Version": "8.2.4",
+            "CVE": "CVE-2016-xxxx",
+            "Operator": "<",
+            "Commits": [
+                "core/d3f585c329c0291b208dc54d75b4aecb7118ff8d"
+            ]
+        },
+        {
+            "Version": "9.0.2",
+            "CVE": "CVE-2016-xxxx",
+            "Operator": "<",
+            "Commits": [
+                "core/830a080f0e4b67d6265ba09ab578060945f28916"
+            ]
+        }
+    ],
+    "Description": "The 'Import root certificate' ability that users are able to use once files_external is enabled allow users to import their own root certificates for connections. (e.g. server-to-server shares to servers using a self-signed certificate or external storages)<br>The functionality was using the PHP OpenSSL parsing functions for parsing these certificate files. Namedly, `openssl_pkey_get_public` and `openssl_x509_parse`. It turned out that these internally call `php_openssl_x509_from_zval` which allow passing in a file:///<br>Therefore an attacker could pass a file beginning with `file://` and ownCloud would try to parse the corresponding file. This leads to a disclosure of arbitrary certificate files if the adversary can guess the correct path.",
+    "ActionTaken": "ownCloud is now preventing files that being with 'file://' from being parsed.",
+    "Acknowledgment":[]
+}
+
+
+## Description
+
+An open redirect vulnerability has been found in the way that ownCloud implemented PDF.js, a successful exploitation of this vulnerability requires multiple pre-requisites:
+
+1. User has to use a Gecko based browser (e.g. Mozilla Firefox)
+2. User has to open a link sent by the adversary
+3. User has to click on the small "Download" button in the top right of the PDF viewer.
+
+Once an user has performed this step they are redirected to the URL passed as a GET parameter.
+
+Note: The user will be displayed a warning that the PDF file can't be loaded properly.
+
+## Affected software
+- ownCloud Server < 7.0.14 (CVE assignment pending)
+- files_pdfviewer/c69858a421b2cad219a0ea580c1ef4e0e2c9877f
+- ownCloud Server < 8.0.12 (CVE assignment pending)
+- files_pdfviewer/54b78d9053dac0195adbebb23dad71d43ab2f6b2
+- ownCloud Server < 8.1.7 (CVE assignment pending)
+- files_pdfviewer/31d4e53fe6e47353c1e7ba15ed07df29e1c174c9
+- ownCloud Server < 8.2.4 (CVE assignment pending)
+- files_pdfviewer/9ab7ca2e5eabea43d18b97d4622ebea30fa09a92
+- ownCloud Server < 9.0.2 (CVE assignment pending)
+- files_pdfviewer/a1445f0f8bf28eed89c1f56682bbb6fe574b4ecf
+
+## Action Taken
+
+The PDF viewer has been configured that it can only be opened via iframes. Since as a clickjacking attack the X-Frame-Options header is employed as well this doesn't make it possible to send users anymore malicious links.
+
+As a further step for the 9.1 release of ownCloud the following changes are planned to mitigate such attack vectors even more:
+
+1. Update the PDF.js library to a version that supports whitelisting of target domains. For reference please see https://github.com/mozilla/pdf.js/pull/6916
+2. Employ Same-Site-Cookies with a strict policy on this endpoint. Browsers supporting Same-Site-Cookies will not make it possible to access such resources directly anymore. For reference please see https://github.com/owncloud/core/pull/24092

@@ -1,0 +1,28 @@
+{
+    "Title": "Incorrect setup of external storage",
+    "Timestamp": 1468368000,
+    "Type": "Insecure Direct Object References",
+    "Risk": 2,
+    "CVSS3": {
+        "score": 7.5,
+        "vector": "AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H"
+    },
+    "CWE": {
+        "id": 538,
+        "name": "File and Directory Information Exposure"
+    },
+    "Affected": [
+        {
+            "Version": "9.0.2",
+            "CVE": "CVE-2016-xxxx",
+            "Operator": "<",
+            "Commits": [
+                "core/d436326e19b8df1594f781e74e8c50151f003ea5",
+                "core/b375086c473f7117d6ee8b61cf0c6e24350b113a"
+            ]
+        }
+    ],
+    "Description": "<p>The external storage functionality as implemented in ownCloud 9.0.x before 9.0.2 is improperly setting up external storages when multiple groups have been granted access to an external storage and a user is member of both groups.</p><p>The storage class is setup without any setup information, leading to multiple issues, including:</p><p>Unavailability of the external storage</p><p>Access to files that are not supposed to be shared (only if the 'Local' storage type is used)</p>",
+    "ActionTaken": "The storage code has been reviewed and been patched to properly setup the storage. Furthermore several hardenings have been added to ownCloud which will highly reduce the change of a successful exploitation of similar vulnerabilities in the future.",
+    "Acknowledgment":[]
+}
