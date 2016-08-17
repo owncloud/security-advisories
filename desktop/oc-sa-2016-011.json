@@ -1,0 +1,30 @@
+{
+    "Title": "Local Code Injection",
+    "Timestamp": 1471448251,
+    "Type": "Process Control",
+    "Risk": 2,
+    "CVSS2": {
+        "score": 3.9,
+        "vector": "AV:L/AC:M/Au:S/C:C/I:P/A:N/E:POC/RL:OF/RC:C"
+    },
+    "CWE": {
+        "id": 114,
+        "name": "Process Control"
+    },
+    "Affected": [
+        {
+            "Version": "2.2.3",
+            "CVE": "CVE pending",
+            "Operator": "<"
+        }
+    ],
+    "Description": "<p>The ownCloud Client was vunerable to a local code injection attack. A malicious local user could create a special path where the client would load libraries from during startup. As on Windows, everyone by default has the permission to write to the <code>C:</code> drive and create arbitrary directories and subdirectories, this attack is practically feasible in any non-hardened Windows environment. This could lead to injecting code into other users' ownCloud Client.</p>",
+    "ActionTaken": "<p>To protect our users ownCloud has issued the 2.2.3 client which no longer loads code from this location. Users of older ownCloud clients are encouraged to import their certificate into the local system trust store.</p>",
+    "Acknowledgment":[
+        {
+            "Name":"Florian Bogner",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ]
+}
