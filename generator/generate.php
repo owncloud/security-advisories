@@ -138,7 +138,16 @@ foreach($components as $component) {
             }
             $content = str_replace('~~ACKNOWLEDGMENTS~~', $acknowledgments, $content);
 
-            file_put_contents('./out/' . substr($fileinfo, 0, -5) . '.php', $content);
+	        $nextCloud = '';
+	        if(isset($advisory['ncAdvisory'])) {
+		        $ncSec = $advisory['ncAdvisory'];
+		        $nextCloud = "<small style=\"color:grey\">This advisory is licensed <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA 4.0</a>. Original source: <a href=\"https://nextcloud.com/security/advisory/?id=$ncSec\">nextcloud.com</a></small>";
+	        }
+
+	        $content = str_replace('~~NEXTCLOUD~~', $nextCloud, $content);
+
+
+	        file_put_contents('./out/' . substr($fileinfo, 0, -5) . '.php', $content);
 
             echo "Finished $fileinfo\n";
         }
