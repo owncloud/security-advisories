@@ -13,8 +13,7 @@
         <p>~~DATE~~</p>
         <p>Risk level: <strong>~~LEVEL~~</strong></p>
         ~~CVSS~~
-        ~~CWE~~
-        ~~HACKERONE~~
+        ~~CWE~~~~HACKERONE~~
         <h3>Description</h3>
         <p>~~DESCRIPTION~~</p>
         <h3>Affected Software</h3>
@@ -28,6 +27,6 @@
         <ul>
             ~~ACKNOWLEDGMENTS~~
         </ul>
-        <br/>
+        <br/>~~NEXTCLOUD~~
     </div>
 </div>

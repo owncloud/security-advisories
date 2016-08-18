@@ -1,0 +1,61 @@
+{
+    "Title": "Edit permission check not enforced on WebDAV COPY action",
+    "Timestamp": 1468929600,
+    "Risk": 2,
+    "CVSS3": {
+        "score": 3.1,
+        "vector": "AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    },
+    "CWE": {
+        "id": 275,
+        "name": "Permission Issues"
+    },
+    "HackerOne": {
+        "id": "145950"
+    },
+    "Affected": [
+        {
+            "Version": "9.0.4",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/121a3304a0c37ccda0e1b63ddc528cba9121a36e"
+            ]
+        },
+        {
+            "Version": "8.2.7",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/c0a4b7b3f38ad2eaf506484b3b92ec678cb021c9"
+            ]
+        },
+        {
+            "Version": "8.1.9",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/0622e635d97cb17c5e1363e370bb8268cc3d2547"
+            ]
+        },
+        {
+            "Version": "8.0.14",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/acbbadb71ceee7f01da347f7dcd519beda78cc47"
+            ]
+        }
+    ],
+    "Description":"<p>The WebDAV endpoint was not properly checking the permission on a WebDAV \"COPY\" action. This allowed an authenticated attacker with access to a read-only share to put new files in there. It was not possible to modify existing files.</p>",
+    "ActionTaken": "The permission check is now also performed on \"COPY\" actions",
+    "Acknowledgment":[
+        {
+            "Name":"Kumar Saurabh",
+            "Link": "http://www.ksaurabh.net",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ],
+    "ncAdvisory": "nc-sa-2016-004"
+}

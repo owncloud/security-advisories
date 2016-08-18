@@ -1,0 +1,60 @@
+{
+    "Title": "Read-only share recipient can restore old versions of file",
+    "Timestamp": 1468929600,
+    "Risk": 1,
+    "CVSS3": {
+        "score": 3.1,
+        "vector": "AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+    },
+    "CWE": {
+        "id": 275,
+        "name": "Permission Issues"
+    },
+    "HackerOne": {
+        "id": "146067"
+    },
+    "Affected": [
+        {
+            "Version": "9.0.4",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/c93eca49c32428ece03dd67042772d5fa62c8d6e"
+            ]
+        },
+        {
+            "Version": "8.2.7",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/3b056fa68ce502ceb0db9b446dab3b9e7b10dd13"
+            ]
+        },
+        {
+            "Version": "8.1.9",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/23383080731d092e079986464a8c4c9ffcb79f4c"
+            ]
+        },
+        {
+            "Version": "8.0.14",
+            "CVE": "CVE-2016-????",
+            "Operator": "<",
+            "Commits": [
+                "core/d31720b6f1e8c8dfeb5e8805ab35ad7c8000b2f1"
+            ]
+        }
+    ],
+    "Description":"<p>The restore capability of ownCloud was not verifying whether an user has only read-only access to a share. Thus an user with read-only access was able to restore old versions.</p>",
+    "ActionTaken": "The permission check is now also performed on restore actions.",
+    "Acknowledgment":[
+        {
+            "Name":"Rudra Pratap Singh ",
+            "Reason":"Vulnerability discovery and disclosure.",
+            "HoF": true
+        }
+    ],
+    "ncAdvisory": "nc-sa-2016-005"
+}
