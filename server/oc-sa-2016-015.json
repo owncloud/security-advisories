@@ -47,7 +47,7 @@
             ]
         }
     ],
-    "Description": "",
+    "Description":"<p>The restore capability of ownCloud was not verifying whether an user has only read-only access to a share. Thus an user with read-only access was able to restore old versions.</p>",
     "ActionTaken": "The permission check is now also performed on restore actions.",
     "Acknowledgment":[
         {
@@ -55,5 +55,6 @@
             "Reason":"Vulnerability discovery and disclosure.",
             "HoF": true
         }
-    ]
+    ],
+    "ncAdvisory": "nc-sa-2016-005"
 }

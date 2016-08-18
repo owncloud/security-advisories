@@ -23,7 +23,7 @@
             ]
         }
     ],
-    "Description": "",
+    "Description":"<p>The location bar in the files app was not verifying the passed parameters. An attacker could craft an invalid link to a fake directory structure and use this to display an attacker-controlled error message to the user.</p>",
     "ActionTaken": "The passed parameter is now verified.",
     "Acknowledgment":[
         {
@@ -32,5 +32,6 @@
             "Reason":"Vulnerability discovery and disclosure.",
             "HoF": true
         }
-    ]
+    ],
+    "ncAdvisory": "nc-sa-2016-003"
 }

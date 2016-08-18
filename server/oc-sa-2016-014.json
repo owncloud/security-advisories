@@ -47,7 +47,7 @@
             ]
         }
     ],
-    "Description": "",
+    "Description":"<p>The WebDAV endpoint was not properly checking the permission on a WebDAV \"COPY\" action. This allowed an authenticated attacker with access to a read-only share to put new files in there. It was not possible to modify existing files.</p>",
     "ActionTaken": "The permission check is now also performed on \"COPY\" actions",
     "Acknowledgment":[
         {
@@ -56,5 +56,6 @@
             "Reason":"Vulnerability discovery and disclosure.",
             "HoF": true
         }
-    ]
+    ],
+    "ncAdvisory": "nc-sa-2016-004"
 }
