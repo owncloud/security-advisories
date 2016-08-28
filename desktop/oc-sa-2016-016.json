@@ -14,7 +14,7 @@
     "Affected": [
         {
             "Version": "2.2.3",
-            "CVE": "CVE pending",
+            "CVE": "CVE-2016-7102",
             "Operator": "<"
         }
     ],
