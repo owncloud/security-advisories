@@ -15,14 +15,6 @@
   },
   "Affected": [
     {
-      "Version": "9.2",
-      "CVE": "CVE-2016-????",
-      "Operator": "<",
-      "Commits": [
-        "apps/c3bd73b9c60b7060852c7fdad9fff717d028e633"
-      ]
-    },
-    {
       "Version": "9.1.2",
       "CVE": "CVE-2016-????",
       "Operator": "<",
