@@ -1,0 +1,45 @@
+{
+  "Title": "Content-Spoofing in \"files\" app",
+  "Timestamp": 1478775556,
+  "Risk": 1,
+  "CVSS3": {
+    "score": 3.1,
+    "vector": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+  },
+  "CWE": {
+    "id": 451,
+    "name": "User Interface (UI) Misrepresentation of Critical Information"
+  },
+  "HackerOne": {
+    "id": "154827"
+  },
+  "Affected": [
+    {
+      "Version": "9.1.2",
+      "CVE": "CVE-2016-????",
+      "Operator": "<",
+      "Commits": [
+        "core/768221fcf3c526c65d85f62b0efa2da5ea00bf2d"
+      ]
+    },
+    {
+      "Version": "9.0.6",
+      "CVE": "CVE-2016-????",
+      "Operator": "<",
+      "Commits": [
+        "core/e7acbce27fa0ef1c6fe216ca67c72d86484919a4"
+      ]
+    }
+  ],
+  "Description":"<p>The location bar in the files app was not verifying the passed parameters. An attacker could craft an invalid link to a fake directory structure and use this to display an attacker-controlled error message to the user.</p>",
+  "ActionTaken": "The passed parameter is now verified.",
+  "Acknowledgment":[
+    {
+      "Name":"lmx",
+      "Reason":"Vulnerability discovery and disclosure.",
+      "Link" : "https://hackerone.com/lmx",
+      "HoF": true
+    }
+  ],
+  "ncAdvisory": "NC-SA-2016-010"
+}
