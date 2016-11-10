@@ -35,8 +35,10 @@
   "ActionTaken": "The mimetype of the exported image is now compared with a whitelist as well as download disposition headers have been set on the response.",
   "Acknowledgment":[
     {
-      "Name":"Lukas Reschke - Nextcloud GmbH",
+      "Name":"Lukas Reschke",
+      "Company" : "Nextcloud GmbH",
       "Reason":"Vulnerability discovery and disclosure.",
+      "Link" : "https://nextcloud.com/",
       "HoF": true
     }
   ],

@@ -43,8 +43,10 @@
   "ActionTaken": "The SMB backend is now performing an additional authentication attempt with invalid credentials. If that succeeds as well it assumes that anonymous authentications are enabled and denies the login attempt.",
   "Acknowledgment":[
     {
-      "Name":"Dwight Hohnstein - Rhino Security Labs",
+      "Name":"Dwight Hohnstein",
+      "Company" : "Rhino Security Labs",
       "Reason":"Vulnerability discovery and disclosure.",
+      "Link" : "https://rhinosecuritylabs.com/",
       "HoF": true
     }
   ],
