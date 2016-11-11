@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "Title": "Content-Spoofing in \"files\" app",
+=======
+  "Title": "Content-Spoofing in \"dav\" app",
+>>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
   "Timestamp": 1478775556,
   "Risk": 1,
   "CVSS3": {
@@ -11,7 +15,11 @@
     "name": "User Interface (UI) Misrepresentation of Critical Information"
   },
   "HackerOne": {
+<<<<<<< HEAD
     "id": "154827"
+=======
+    "id": "149798"
+>>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
   },
   "Affected": [
     {
@@ -19,7 +27,11 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
+<<<<<<< HEAD
         "core/768221fcf3c526c65d85f62b0efa2da5ea00bf2d"
+=======
+        "core/96b8afe48570bc70088ccd8f897e9d71997d336e"
+>>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
       ]
     },
     {
@@ -27,6 +39,7 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
+<<<<<<< HEAD
         "core/e7acbce27fa0ef1c6fe216ca67c72d86484919a4"
       ]
     }
@@ -42,4 +55,22 @@
     }
   ],
   "ncAdvisory": "NC-SA-2016-010"
+=======
+        "core/bcc6c39ad8c22a00323a114e9c1a0a834983fb35"
+      ]
+    }
+  ],
+  "Description":"<p>The exception message displayed on the DAV endpoints contained partially user-controllable input leading to a potential misrepresentation of information.</p>",
+  "ActionTaken": "The user-controlled content has been removed from the exception message.",
+  "Acknowledgment":[
+    {
+      "Name":"YoKo Kho",
+      "Company" : "MII CAS",
+      "Reason":"Vulnerability discovery and disclosure.",
+      "Link" : "https://twitter.com/YoKoAcc",
+      "HoF": true
+    }
+  ],
+  "ncAdvisory": "NC-SA-2016-011"
+>>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
 }

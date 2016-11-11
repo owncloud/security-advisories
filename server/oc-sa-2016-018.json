@@ -1,17 +1,30 @@
 {
+<<<<<<< HEAD
   "Title": "Stored XSS in CardDAV image export",
   "Timestamp": 1478775556,
   "Risk": 2,
   "CVSS3": {
     "score": 5.4,
     "vector": "AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+=======
+  "Title": "Reflected XSS in Gallery application",
+  "Timestamp": 1478775556,
+  "Risk": 2,
+  "CVSS3": {
+    "score": 6.1,
+    "vector": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+>>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
   },
   "CWE": {
     "id": 79,
     "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
   },
   "HackerOne": {
+<<<<<<< HEAD
     "id": "163338"
+=======
+    "id": "165686"
+>>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
   },
   "Affected": [
     {
@@ -19,7 +32,11 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
+<<<<<<< HEAD
         "core/6bf3be3877d9d9fda9c66926fe273fe79cbaf58e"
+=======
+        "gallery/b3b3772fb9bec61ba10d357bef42b676fa474eee"
+>>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
       ]
     },
     {
@@ -27,6 +44,7 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
+<<<<<<< HEAD
         "core/b5a5be24c418033cb2ef965a4f3f06b7b4213845"
       ]
     }
@@ -43,4 +61,20 @@
     }
   ],
   "ncAdvisory": "NC-SA-2016-008"
+=======
+        "gallery/dc4887f1afcc0cf304f4a0694075c9364298ad8a"
+      ]
+    }
+  ],
+  "Description":"<p>The gallery app was not properly sanitizing exception messages from the ownCloud server. Due to an endpoint where an attacker could influence the error message this lead to a reflected Cross-Site-Scripting vulnerability.</p>",
+  "ActionTaken": "Error messages are now properly sanitized.",
+  "Acknowledgment":[
+    {
+      "Name":"Aliaksei Panamarenka",
+      "Reason":"Vulnerability discovery and disclosure.",
+      "HoF": true
+    }
+  ],
+  "ncAdvisory": "NC-SA-2016-009"
+>>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
 }
