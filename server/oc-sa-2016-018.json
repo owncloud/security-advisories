@@ -1,17 +1,17 @@
 {
-  "Title": "Reflected XSS in Gallery application",
+  "Title": "Stored XSS in CardDAV image export",
   "Timestamp": 1478775556,
   "Risk": 2,
   "CVSS3": {
-    "score": 6.1,
-    "vector": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+    "score": 5.4,
+    "vector": "AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
   },
   "CWE": {
     "id": 79,
     "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
   },
   "HackerOne": {
-    "id": "165686"
+    "id": "163338"
   },
   "Affected": [
     {
@@ -19,7 +19,7 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-        "gallery/b3b3772fb9bec61ba10d357bef42b676fa474eee"
+        "core/6bf3be3877d9d9fda9c66926fe273fe79cbaf58e"
       ]
     },
     {
@@ -27,18 +27,20 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-        "gallery/dc4887f1afcc0cf304f4a0694075c9364298ad8a"
+        "core/b5a5be24c418033cb2ef965a4f3f06b7b4213845"
       ]
     }
   ],
-  "Description":"<p>The gallery app was not properly sanitizing exception messages from the ownCloud server. Due to an endpoint where an attacker could influence the error message this lead to a reflected Cross-Site-Scripting vulnerability.</p>",
-  "ActionTaken": "Error messages are now properly sanitized.",
+  "Description":"<p>The CardDAV image export functionality as implemented in ownCloud allows the download of images stored within a vCard. Due to not performing any kind of verification on the image content this is prone to a stored Cross-Site Scripting attack.</p><p><b>Note:</b>ownCloud employs a very strict Content Security Policy on the DAV endpoints. This is thus only exploitable on browsers that don't support Content Security Policy.</p>",
+  "ActionTaken": "The mimetype of the exported image is now compared with a whitelist as well as download disposition headers have been set on the response.",
   "Acknowledgment":[
     {
-      "Name":"Aliaksei Panamarenka",
+      "Name":"Lukas Reschke",
+      "Company" : "Nextcloud GmbH",
       "Reason":"Vulnerability discovery and disclosure.",
+      "Link" : "https://nextcloud.com/",
       "HoF": true
     }
   ],
-  "ncAdvisory": "NC-SA-2016-009"
+  "ncAdvisory": "NC-SA-2016-008"
 }

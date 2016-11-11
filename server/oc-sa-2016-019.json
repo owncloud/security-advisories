@@ -1,17 +1,17 @@
 {
-  "Title": "Content-Spoofing in \"files\" app",
+  "Title": "Reflected XSS in Gallery application",
   "Timestamp": 1478775556,
-  "Risk": 1,
+  "Risk": 2,
   "CVSS3": {
-    "score": 3.1,
-    "vector": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+    "score": 6.1,
+    "vector": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
   },
   "CWE": {
-    "id": 451,
-    "name": "User Interface (UI) Misrepresentation of Critical Information"
+    "id": 79,
+    "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
   },
   "HackerOne": {
-    "id": "154827"
+    "id": "165686"
   },
   "Affected": [
     {
@@ -19,7 +19,7 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-        "core/768221fcf3c526c65d85f62b0efa2da5ea00bf2d"
+        "gallery/b3b3772fb9bec61ba10d357bef42b676fa474eee"
       ]
     },
     {
@@ -27,19 +27,18 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-        "core/e7acbce27fa0ef1c6fe216ca67c72d86484919a4"
+        "gallery/dc4887f1afcc0cf304f4a0694075c9364298ad8a"
       ]
     }
   ],
-  "Description":"<p>The location bar in the files app was not verifying the passed parameters. An attacker could craft an invalid link to a fake directory structure and use this to display an attacker-controlled error message to the user.</p>",
-  "ActionTaken": "The passed parameter is now verified.",
+  "Description":"<p>The gallery app was not properly sanitizing exception messages from the ownCloud server. Due to an endpoint where an attacker could influence the error message this lead to a reflected Cross-Site-Scripting vulnerability.</p>",
+  "ActionTaken": "Error messages are now properly sanitized.",
   "Acknowledgment":[
     {
-      "Name":"lmx",
+      "Name":"Aliaksei Panamarenka",
       "Reason":"Vulnerability discovery and disclosure.",
-      "Link" : "https://hackerone.com/lmx",
       "HoF": true
     }
   ],
-  "ncAdvisory": "NC-SA-2016-010"
+  "ncAdvisory": "NC-SA-2016-009"
 }

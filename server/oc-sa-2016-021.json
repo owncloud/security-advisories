@@ -1,5 +1,5 @@
 {
-  "Title": "Content-Spoofing in \"files\" app",
+  "Title": "Content-Spoofing in \"dav\" app",
   "Timestamp": 1478775556,
   "Risk": 1,
   "CVSS3": {
@@ -11,7 +11,7 @@
     "name": "User Interface (UI) Misrepresentation of Critical Information"
   },
   "HackerOne": {
-    "id": "154827"
+    "id": "149798"
   },
   "Affected": [
     {
@@ -19,7 +19,7 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-        "core/768221fcf3c526c65d85f62b0efa2da5ea00bf2d"
+        "core/96b8afe48570bc70088ccd8f897e9d71997d336e"
       ]
     },
     {
@@ -27,19 +27,20 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-        "core/e7acbce27fa0ef1c6fe216ca67c72d86484919a4"
+        "core/bcc6c39ad8c22a00323a114e9c1a0a834983fb35"
       ]
     }
   ],
-  "Description":"<p>The location bar in the files app was not verifying the passed parameters. An attacker could craft an invalid link to a fake directory structure and use this to display an attacker-controlled error message to the user.</p>",
-  "ActionTaken": "The passed parameter is now verified.",
+  "Description":"<p>The exception message displayed on the DAV endpoints contained partially user-controllable input leading to a potential misrepresentation of information.</p>",
+  "ActionTaken": "The user-controlled content has been removed from the exception message.",
   "Acknowledgment":[
     {
-      "Name":"lmx",
+      "Name":"YoKo Kho",
+      "Company" : "MII CAS",
       "Reason":"Vulnerability discovery and disclosure.",
-      "Link" : "https://hackerone.com/lmx",
+      "Link" : "https://twitter.com/YoKoAcc",
       "HoF": true
     }
   ],
-  "ncAdvisory": "NC-SA-2016-010"
+  "ncAdvisory": "NC-SA-2016-011"
 }
