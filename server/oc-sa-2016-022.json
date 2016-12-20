@@ -1,0 +1,48 @@
+{
+  "Title": "Bypass received read-only share permissions using read-write reshare",
+  "Timestamp": 1482223885,
+  "Risk": 2,
+  "CVSS3": {
+    "score": 6.5,
+    "vector": "AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:N"
+  },
+  "CWE": {
+    "id": 275,
+    "name": "Permission Issues"
+  },
+  "Affected": [
+    {
+      "Version": "9.2.*",
+      "CVE": "CVE-2016-????",
+      "Operator": "<",
+      "Commits": [
+        "core/1309dfdcc88ee92bb4deb4d1e87a7120956e24c6"
+      ]
+    },
+    {
+      "Version": "9.1.*",
+      "CVE": "CVE-2016-????",
+      "Operator": "<",
+      "Commits": [
+        "core/c7c1b61e10514fe4d8efbaf1156501dd795e7ac1"
+      ]
+    },
+    {
+      "Version": "9.0.*",
+      "CVE": "CVE-2016-????",
+      "Operator": "<",
+      "Commits": [
+        "core/65af3785ab5e1d780598874b3553c93767447f1f"
+      ]
+    }
+  ],
+  "Description":"<p>User can upload and modify the link share contents even though the original sharer has only read-only access.</p>",
+  "ActionTaken": "Make share permission check work correctly from share manager.",
+  "Acknowledgment":[
+    {
+      "Name":"Sergio Bertolin",
+      "Reason":"Vulnerability discovery and disclosure.",
+      "HoF": true
+    }
+  ]
+}
