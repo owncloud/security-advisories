@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "Title": "SMB User Authentication Bypass",
   "Timestamp": 1478775556,
   "Risk": 3,
@@ -13,21 +12,6 @@
   },
   "HackerOne": {
     "id": "148151"
-=======
-  "Title": "Stored XSS in CardDAV image export",
-  "Timestamp": 1478775556,
-  "Risk": 2,
-  "CVSS3": {
-    "score": 5.4,
-    "vector": "AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
-  },
-  "CWE": {
-    "id": 79,
-    "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
-  },
-  "HackerOne": {
-    "id": "163338"
->>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
   },
   "Affected": [
     {
@@ -35,11 +19,7 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-<<<<<<< HEAD
         "apps/5d47e7b52646cf79edadd78ce10c754290cbb732"
-=======
-        "core/6bf3be3877d9d9fda9c66926fe273fe79cbaf58e"
->>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
       ]
     },
     {
@@ -47,7 +27,6 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-<<<<<<< HEAD
         "apps/16cbccfc946c8711721fa684d78135ca1fb64791"
       ]
     },
@@ -72,22 +51,4 @@
     }
   ],
   "ncAdvisory": "NC-SA-2016-006"
-=======
-        "core/b5a5be24c418033cb2ef965a4f3f06b7b4213845"
-      ]
-    }
-  ],
-  "Description":"<p>The CardDAV image export functionality as implemented in ownCloud allows the download of images stored within a vCard. Due to not performing any kind of verification on the image content this is prone to a stored Cross-Site Scripting attack.</p><p><b>Note:</b>ownCloud employs a very strict Content Security Policy on the DAV endpoints. This is thus only exploitable on browsers that don't support Content Security Policy.</p>",
-  "ActionTaken": "The mimetype of the exported image is now compared with a whitelist as well as download disposition headers have been set on the response.",
-  "Acknowledgment":[
-    {
-      "Name":"Lukas Reschke",
-      "Company" : "Nextcloud GmbH",
-      "Reason":"Vulnerability discovery and disclosure.",
-      "Link" : "https://nextcloud.com/",
-      "HoF": true
-    }
-  ],
-  "ncAdvisory": "NC-SA-2016-008"
->>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
 }

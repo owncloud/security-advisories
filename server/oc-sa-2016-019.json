@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "Title": "Reflected XSS in Gallery application",
   "Timestamp": 1478775556,
   "Risk": 2,
@@ -13,21 +12,6 @@
   },
   "HackerOne": {
     "id": "165686"
-=======
-  "Title": "Content-Spoofing in \"files\" app",
-  "Timestamp": 1478775556,
-  "Risk": 1,
-  "CVSS3": {
-    "score": 3.1,
-    "vector": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
-  },
-  "CWE": {
-    "id": 451,
-    "name": "User Interface (UI) Misrepresentation of Critical Information"
-  },
-  "HackerOne": {
-    "id": "154827"
->>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
   },
   "Affected": [
     {
@@ -35,11 +19,7 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-<<<<<<< HEAD
         "gallery/b3b3772fb9bec61ba10d357bef42b676fa474eee"
-=======
-        "core/768221fcf3c526c65d85f62b0efa2da5ea00bf2d"
->>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
       ]
     },
     {
@@ -47,7 +27,6 @@
       "CVE": "CVE-2016-????",
       "Operator": "<",
       "Commits": [
-<<<<<<< HEAD
         "gallery/dc4887f1afcc0cf304f4a0694075c9364298ad8a"
       ]
     }
@@ -62,21 +41,4 @@
     }
   ],
   "ncAdvisory": "NC-SA-2016-009"
-=======
-        "core/e7acbce27fa0ef1c6fe216ca67c72d86484919a4"
-      ]
-    }
-  ],
-  "Description":"<p>The location bar in the files app was not verifying the passed parameters. An attacker could craft an invalid link to a fake directory structure and use this to display an attacker-controlled error message to the user.</p>",
-  "ActionTaken": "The passed parameter is now verified.",
-  "Acknowledgment":[
-    {
-      "Name":"lmx",
-      "Reason":"Vulnerability discovery and disclosure.",
-      "Link" : "https://hackerone.com/lmx",
-      "HoF": true
-    }
-  ],
-  "ncAdvisory": "NC-SA-2016-010"
->>>>>>> 2ba6c243453fb9c5d5414fa3b8269fbbf37a5821
 }
