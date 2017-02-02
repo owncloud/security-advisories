@@ -1,0 +1,57 @@
+{
+  "Title": "Flooding logfiles with a 1 Bit BMP File",
+  "Timestamp": 1486021589,
+  "Risk": 2,
+  "CVSS3": {
+    "score": 4.1,
+    "vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:N/A:N"
+  },
+  "CWE": {
+    "id": 779,
+    "name": "Logging of Excessive Data"
+  },
+  "Affected": [
+    {
+      "Version": "9.1.3",
+      "CVE": "CVE-2017-????",
+      "Operator": "<",
+      "Commits": [
+        "core/0f1da72db6cd3ca08d166d96c57f39b8563d048f"
+      ]
+    },
+    {
+      "Version": "9.0.7",
+      "CVE": "CVE-2017-????",
+      "Operator": "<",
+      "Commits": [
+        "core/69fcf706fc7125c028b87fe8224a544ff124dc4b"
+      ]
+    },
+    {
+      "Version": "8.2.9",
+      "CVE": "CVE-2017-????",
+      "Operator": "<",
+      "Commits": [
+        "core/83da5e2ce952c042abb9ba88c293795b750cde89"
+      ]
+    },
+    {
+      "Version": "8.1.11",
+      "CVE": "CVE-2017-????",
+      "Operator": "<",
+      "Commits": [
+        "core/45fc1aa6f9200fe55e417eed02e18c965fe09872"
+      ]
+    }
+  ],
+  "Description":"<p>An Attacker can upload a 1 Bit BMP File and the server hangs and doesn't stop to populate a logfile</p>",
+  "ActionTaken": "Suppress error messages with 1 Bit BMP Files",
+  "Acknowledgment":[
+    {
+      "Name":"Temtaime",
+      "Reason":"Vulnerability discovery and disclosure.",
+      "Link" : "https://github.com/Temtaime",
+      "HoF": true
+    }
+  ]
+}
