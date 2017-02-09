@@ -13,7 +13,7 @@
   "Affected": [
     {
       "Version": "9.1.3",
-      "CVE": "CVE-2017-????",
+      "CVE": "CVE-2017-5865",
       "Operator": "<",
       "Commits": [
         "core/d2f47acb38675d2798fe9e9b6294981f24613d40"
@@ -21,7 +21,7 @@
     },
     {
       "Version": "9.0.7",
-      "CVE": "CVE-2017-????",
+      "CVE": "CVE-2017-5865",
       "Operator": "<",
       "Commits": [
         "core/108c8131abf3c9e4728908475c2afc4ec5f0651e"
@@ -29,7 +29,7 @@
     },
     {
       "Version": "8.2.9",
-      "CVE": "CVE-2017-????",
+      "CVE": "CVE-2017-5865",
       "Operator": "<",
       "Commits": [
         "core/f36952f4d1a2dbeac43fd9c2760c7a23035537c2"
@@ -37,7 +37,7 @@
     },
     {
       "Version": "8.1.11",
-      "CVE": "CVE-2017-????",
+      "CVE": "CVE-2017-5865",
       "Operator": "<",
       "Commits": [
         "core/cc616a79398a2be5beb64bcf52511f75833629ca"
