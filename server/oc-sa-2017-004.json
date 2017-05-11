@@ -1,0 +1,42 @@
+{
+  "Title": "XSS in Error Page",
+  "Timestamp": 1493103792,
+  "Risk": 2,
+  "CVSS3": {
+    "score": 4.3,
+    "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+  },
+  "CWE": {
+    "id": 79,
+    "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')a"
+  },
+  "HackerOne": {
+    "id": "215410"
+  },
+  "Affected": [
+    {
+      "Version": "10.0.1",
+      "CVE": "CVE-2017-5867",
+      "Operator": "<"
+    },
+    {
+      "Version": "9.1.6",
+      "CVE": "CVE-2017-5867",
+      "Operator": "<"
+    },
+    {
+      "Version": "9.0.10",
+      "CVE": "CVE-2017-5867",
+      "Operator": "<"
+    }
+  ],
+  "Description":"<p>A Attacker can inject HTML script code into a error message</p>",
+  "ActionTaken": "Escape output",
+  "Acknowledgment":[
+    {
+      "Name":"Manuel Mancera",
+      "Reason":"Vulnerability discovery and disclosure.",
+      "HoF": true
+    }
+  ]
+}
