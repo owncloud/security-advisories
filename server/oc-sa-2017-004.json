@@ -16,17 +16,17 @@
   "Affected": [
     {
       "Version": "10.0.1",
-      "CVE": "CVE-2017-5867",
+      "CVE": "CVE-2017-8896",
       "Operator": "<"
     },
     {
       "Version": "9.1.6",
-      "CVE": "CVE-2017-5867",
+      "CVE": "CVE-2017-8896",
       "Operator": "<"
     },
     {
       "Version": "9.0.10",
-      "CVE": "CVE-2017-5867",
+      "CVE": "CVE-2017-8896",
       "Operator": "<"
     }
   ],
