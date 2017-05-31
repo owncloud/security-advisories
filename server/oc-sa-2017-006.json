@@ -1,0 +1,32 @@
+{
+  "Title": "Normal user can somehow make admin to delete shared folders",
+  "Timestamp": 1496219997,
+  "Risk": 2,
+  "CVSS3": {
+    "score": 4.3,
+    "vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+  },
+  "CWE": {
+    "id": 269,
+    "name": "Improper Privilege Management"
+  },
+  "HackerOne": {
+    "id": "166581"
+  },
+  "Affected": [
+    {
+      "Version": "10.0.2",
+      "CVE": "CVE-2017-8896",
+      "Operator": "<"
+    }
+  ],
+  "Description":"<p>A Attacker is logged in as a normal user and can somehow make admin to delete shared folders</p>",
+  "ActionTaken": "Adjust privileges",
+  "Acknowledgment":[
+    {
+      "Name":"Elamaran Venkatraman",
+      "Reason":"Vulnerability discovery and disclosure.",
+      "HoF": true
+    }
+  ]
+}
