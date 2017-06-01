@@ -183,6 +183,12 @@ foreach($components as $component) {
                 $content .= $advisory['ActionTaken']."\n";
             }
 
+            if(isset($advisory['ncAdvisory'])) {
+                $ncSec = $advisory['ncAdvisory'];
+                $content .= "\nThis advisory is licensed CC BY-SA 4.0. Original source: https://nextcloud.com/security/advisory/?id=$ncSec\n";
+            }
+
+
             file_put_contents('./out/' . substr($fileinfo, 0, -5) . '.txt', $content);
 
             echo "Finished $fileinfo\n";

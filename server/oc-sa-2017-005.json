@@ -28,5 +28,6 @@
       "Reason": "Vulnerability discovery and disclosure."
     }
   ],
+  "ncAdvisory": "nc-sa-2017-011",
   "Resolution": "<p>It is recommended that all instances are upgraded to ownCloud 10.0.2.</p>"
 }

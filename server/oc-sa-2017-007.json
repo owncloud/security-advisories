@@ -39,5 +39,6 @@
       "Name":"Ahsan Khan",
       "Reason":"Vulnerability discovery and disclosure."
     }
-  ]
+  ],
+  "ncAdvisory": "nc-sa-2017-007"
 }
