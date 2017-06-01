@@ -8,7 +8,7 @@
   },
   "CWE": {
     "id": 79,
-    "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')a"
+    "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
   },
   "HackerOne": {
     "id": "215410"
@@ -40,8 +40,7 @@
   "Acknowledgment":[
     {
       "Name":"Manuel Mancera",
-      "Reason":"Vulnerability discovery and disclosure.",
-      "HoF": true
+      "Reason":"Vulnerability discovery and disclosure."
     }
   ]
 }
