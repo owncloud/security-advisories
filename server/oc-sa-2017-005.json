@@ -14,7 +14,7 @@
   "Affected":[
     {
       "Version":"10.0.2",
-      "CVE":"CVE-2017-0894",
+      "CVE":"CVE-2017-9339",
       "Operator":"<"
     }
   ],

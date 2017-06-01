@@ -149,6 +149,42 @@ foreach($components as $component) {
 
 	        file_put_contents('./out/' . substr($fileinfo, 0, -5) . '.php', $content);
 
+	        // Generating text info file
+            $content = '';
+            $content = $advisory['Title']."\n";
+            for($i = 0; $i < strlen($advisory['Title']);$i++) {
+                $content .= "=";
+            }
+            $content .= "\n\n";
+            $content .= '- Risk: '.$risk."\n";
+            if (isset($advisory['CVSS3'])) {
+                $content .= '- CVSS v3 Base Score: '.$advisory['CVSS3']['score']."\n";
+                $content .= '- CVSS v3 Vector: '.$advisory['CVSS3']['vector']."\n";
+            } elseif (isset($advisory['CVSS2'])) {
+                $content .= '- CVSS v2 Base Score: '.$advisory['CVSS2']['score']."\n";
+                $content .= '- CVSS v2 Vector: '.$advisory['CVSS2']['vector']."\n";
+            }
+            if (isset($advisory['CWE'])) {
+                $content .= '- CWE ID: ' . $advisory['CWE']['id'] . "\n";
+                $content .= '- CWE Name: ' . $advisory['CWE']['name'] . "\n\n";
+            }
+            $content .= "Description\n";
+            $content .= "-----------\n";
+            $content .= strip_tags($advisory['Description'])."\n\n";
+            $affectedVersions = '';
+            foreach($advisory['Affected'] as $affected) {
+                $operator = isset($affected['Operator']) ? $affected['Operator'].' ' : '';
+                $affectedVersions .= "ownCloud ". ucfirst($component). " " . $operator." ".$affected["Version"]." (".$affected["CVE"].")\n";
+            }
+            $content .= $affectedVersions;
+            if (isset($advisory['ActionTaken'])) {
+                $content .= "\nAction Taken\n";
+                $content .= "-------------\n";
+                $content .= $advisory['ActionTaken']."\n";
+            }
+
+            file_put_contents('./out/' . substr($fileinfo, 0, -5) . '.txt', $content);
+
             echo "Finished $fileinfo\n";
         }
     }

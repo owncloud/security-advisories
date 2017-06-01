@@ -13,22 +13,22 @@
   "Affected": [
     {
       "Version": "10.0.2",
-      "CVE": "CVE-2017-8896",
+      "CVE": "CVE-2017-9338",
       "Operator": "<"
     },
     {
       "Version": "9.1.6",
-      "CVE": "CVE-2017-8896",
+      "CVE": "CVE-2017-9338",
       "Operator": "<"
     },
     {
       "Version": "9.0.10",
-      "CVE": "CVE-2017-8896",
+      "CVE": "CVE-2017-9338",
       "Operator": "<"
     },
     {
       "Version": "8.2.12",
-      "CVE": "CVE-2017-8896",
+      "CVE": "CVE-2017-9338",
       "Operator": "<"
     }
   ],
