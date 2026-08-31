@@ -1,4 +1,4 @@
-# agents.md — security-advisories
+# AGENTS.md — security-advisories
 
 ## Repository Overview
 
